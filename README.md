@@ -16,10 +16,11 @@ Apartir desse planejamento, espera-se que as placas consigam não sofrer colisã
 
 Para verificar o funcionamento correto do código, testou-se o sincronismo entre as placas utilizando um funcionamento por LEDs, onde o LED azul indica que a placa está apenas com o TX enviando a mensagem enquanto o LED verde indica que a placa está apenas com o RX ativo e está recebendo as mensagens. 
 	| Teste |  |
-| ----------- | ----------- |
+| ----- | ----|
 | Pré-Condição | Ambas as placas começam em estados diferentes |
 | Etapas de Teste | No momento que qualquer uma das placas trocar de estado, resetar uma placa. |
 | Pós-Condição | A placa precisa estar no LED oposto ao LED da outra placa (Nesse caso, se uma placa estiver verde, a outra precisa estar azul e vice-versa. |
+
 Testou-se também se as placas sincronizavam mesmo resetando elas em tempos diferentes. Os testes podem ser vistos no vídeo a seguir:
 _Descreva um teste para verificação de correto funcionamento do sistema considerando este requisito de sincronismo por meio de botão, contemplando pré-condição, etapas do teste e pós-condição, de forma similar ao realizado em atividades anteriores (Dica: como não terá o canal de comunicação com o computador, podem utilizar o led da placa para indicar a transmissão e recepção de informações)_.
 A ideia é descrever o teste primeiro antes da implementação, de acordo com o TDD visto na atividade passada.
