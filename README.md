@@ -10,7 +10,8 @@ Considerando o cenário proposto de comunicação entre duas placas com modo de 
 
 O diagrama de estados abaixo foi elaborado para demonstrar o funcionamento da passagem de estado de cada microcontrolador:
 
-Diagrama: <img width="1148" height="873" alt="image" src="https://github.com/user-attachments/assets/d1d83a3a-7443-4c5e-8c1c-3e53f17b7415" />
+Diagrama: <img width="1148" height="873" alt="image" src="https://github.com/user-attachments/assets/c26b20c8-f16e-42be-8c90-c646592f75de" />
+
 
 
 Apartir desse planejamento, espera-se que as placas consigam não sofrer colisão e funcionar de maneira síncrona, sem necessitar de um botão que se pressione externamente, já que ela sempre checa a sincronização de ambas as placas na passagem de estados apartir do sinal que a placa mestre envia pelo botão.
@@ -38,6 +39,9 @@ Nos casos em que há problemas de sincronismo, podemos ter o cenário de colisã
 Para lidar com este problema, a proposta é elaborar uma detecção de colisão: logo antes de transmitir a mensagem completa, ou após transmitir cada caractere, podemos ouvir o canal (modo de recepção) para verificar se não há alguém já transmitindo, e não iniciar a transmissão caso o canal de comunicação esteja ocupado.
 
 _Elabore um diagrama de transição de estados (versão 2) para modelar como as duas placas irão interagir com o sincronismo por botão e a detecção de colisão, considerando os diversos estados possíveis e os eventos que determinam as transições de estados (vocês podem utilizar o D2 diagrams visto em atividade anterior: https://play.d2lang.com/)_.
+
+Diagrama: <img width="1573" height="1107" alt="image" src="https://github.com/user-attachments/assets/f027d068-ea24-475c-81ce-c6fe1da04bcd" />
+
 
 _Descreva um teste para verificação de correto funcionamento do sistema considerando este requisito de detecção de colisão, contemplando pré-condição, etapas do teste e pós-condição, de forma similar ao realizado em atividades anteriores (Dica: é possível mapear os estados mais relevantes a comportamentos do led da placa para observar o seu funcionamento?)_.
 
