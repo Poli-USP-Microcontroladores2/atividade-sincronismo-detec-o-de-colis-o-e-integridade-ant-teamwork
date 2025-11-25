@@ -46,8 +46,8 @@ https://github.com/user-attachments/assets/4d33eeb9-d415-47ee-8040-3090cb11e4ef
   | | Teste de Sincronia |
 | ----- | ----|
 | Pré-Condição | Ambas as placas começam em estados diferentes e elas não estão mais conectadas por botão|
-| Etapas de Teste | 1 | No momento que qualquer uma das placas der o tempo de trocar de estado, ela deve ficar em RX inicialmente|
-| Etapas de Teste | 2 |Ela deve verificar o canal para ver se está recebendo uma mensagem. Se a placa estiver recebendo mensagem, ela permanece em RX e verfica novamente em 100ms. Se não, ela muda para TX e envia mensagens |
+| Etapas de Teste: 1 | No momento que qualquer uma das placas der o tempo de trocar de estado, ela deve ficar em RX inicialmente|
+| Etapas de Teste: 2 |Ela deve verificar o canal para ver se está recebendo uma mensagem. Se a placa estiver recebendo mensagem, ela permanece em RX e verfica novamente em 100ms. Se não, ela muda para TX e envia mensagens |
 | Pós-Condição | Nenhuma das placas pode estar em estado de TX (nesse caso no Led Azul) ao mesmo tempo |
 
 
