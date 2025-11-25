@@ -40,7 +40,8 @@ Para lidar com este problema, a proposta é elaborar uma detecção de colisão:
 
 _Elabore um diagrama de transição de estados (versão 2) para modelar como as duas placas irão interagir com o sincronismo por botão e a detecção de colisão, considerando os diversos estados possíveis e os eventos que determinam as transições de estados (vocês podem utilizar o D2 diagrams visto em atividade anterior: https://play.d2lang.com/)_.
 
-Diagrama: <img width="1573" height="1107" alt="image" src="https://github.com/user-attachments/assets/f027d068-ea24-475c-81ce-c6fe1da04bcd" />
+Diagrama: <img width="1576" height="1432" alt="image" src="https://github.com/user-attachments/assets/ea261e2d-9783-401c-bede-0a48ab551a83" />
+
 
 
 _Descreva um teste para verificação de correto funcionamento do sistema considerando este requisito de detecção de colisão, contemplando pré-condição, etapas do teste e pós-condição, de forma similar ao realizado em atividades anteriores (Dica: é possível mapear os estados mais relevantes a comportamentos do led da placa para observar o seu funcionamento?)_.
