@@ -17,7 +17,7 @@ Apartir desse planejamento, espera-se que as placas consigam não sofrer colisã
 
 Para verificar o funcionamento correto do código, testou-se o sincronismo entre as placas utilizando um funcionamento por LEDs, onde o LED azul indica que a placa está apenas com o TX enviando a mensagem enquanto o LED verde indica que a placa está apenas com o RX ativo e está recebendo as mensagens. Elaborando esse teste como TDD, deseja-se testar se as placas estão sincronizadas. Primeiramente, o código falha se qualquer um dos leds não for diferente do LED da outra placa à qualquer momento, já que elas nunca podem estar no mesmo estado ao mesmo tempo.  
 
-| Teste de Sincronia|  |
+| | Teste de Sincronia |
 | ----- | ----|
 | Pré-Condição | Ambas as placas começam em estados diferentes |
 | Etapas de Teste | No momento que qualquer uma das placas trocar de estado, resetar uma placa. |
