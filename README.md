@@ -10,13 +10,14 @@ Considerando o cenário proposto de comunicação entre duas placas com modo de 
 
 O diagrama de estados abaixo foi elaborado para demonstrar o funcionamento da passagem de estado de cada microcontrolador:
 
-Diagrama: <img width="1137" height="1107" alt="image" src="https://github.com/user-attachments/assets/d13d6846-c7c2-4645-ab94-e8b081f867e9" />
+Diagrama: <img width="1148" height="873" alt="image" src="https://github.com/user-attachments/assets/d1d83a3a-7443-4c5e-8c1c-3e53f17b7415" />
+
 
 Apartir desse planejamento, espera-se que as placas consigam não sofrer colisão e funcionar de maneira síncrona, sem necessitar de um botão que se pressione externamente, já que ela sempre checa a sincronização de ambas as placas na passagem de estados apartir do sinal que a placa mestre envia pelo botão.
 
-Para verificar o funcionamento correto do código, testou-se o sincronismo entre as placas utilizando um funcionamento por LEDs, onde o LED azul indica que a placa está apenas com o TX enviando a mensagem enquanto o LED verde indica que a placa está apenas com o RX ativo e está recebendo as mensagens. 
+Para verificar o funcionamento correto do código, testou-se o sincronismo entre as placas utilizando um funcionamento por LEDs, onde o LED azul indica que a placa está apenas com o TX enviando a mensagem enquanto o LED verde indica que a placa está apenas com o RX ativo e está recebendo as mensagens. Elaborando esse teste como TDD, deseja-se testar se as placas estão sincronizadas. Primeiramente, o código falha se qualquer um dos leds não for diferente do LED da outra placa à qualquer momento, já que elas nunca podem estar no mesmo estado ao mesmo tempo.  
 
-| Teste |  |
+| Teste de Sincronia|  |
 | ----- | ----|
 | Pré-Condição | Ambas as placas começam em estados diferentes |
 | Etapas de Teste | No momento que qualquer uma das placas trocar de estado, resetar uma placa. |
