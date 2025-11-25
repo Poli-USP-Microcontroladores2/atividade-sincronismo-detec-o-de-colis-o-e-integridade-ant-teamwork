@@ -43,7 +43,7 @@ https://github.com/user-attachments/assets/4d33eeb9-d415-47ee-8040-3090cb11e4ef
 
   Para verificar o funcionamento correto do código, elaborou-se um teste que verifica se ele está realmente tratando as colisões. Nesse teste, as placas precisam verificar se outra placa está em TX/ se o canal está ocupado, ou seja, se a outra placa está enviando uma mensagem somente depois de verificar que o canal está aberto, a placa muda seu estado para TX para enviar mensagens.
 
-  | | Teste de Sincronia |
+  | | Teste de Colisão |
 | ----- | ----|
 | Pré-Condição | Ambas as placas começam em estados diferentes e elas não estão mais conectadas por botão|
 | Etapas de Teste: 1 | No momento que qualquer uma das placas der o tempo de trocar de estado, ela deve ficar em RX inicialmente|
@@ -53,15 +53,18 @@ https://github.com/user-attachments/assets/4d33eeb9-d415-47ee-8040-3090cb11e4ef
 
 ### 1.3. Verificação de Integridade
 
-Reflita inicialmente o que ocorre com as mensagens transmitidas e recebidas em caso de colisão.
+  Para a verificação de Integridade, foi vista a necessidade de implementar um verificador de tamanho e conteúdo para os pacotes que são enviados. O verificador de tamanho seerve como um teste rápido para ver a integridade da mensagem, enquanto que o verificador de conteúdo existe pois há a chance de a mensagem pode ter o mesmo tamanho, mas seu conteúdo estar alterado. Por isso, a verificação de integridade de conteúdo também deve saber o conteúdo da mensagem que recebe.
 
-Nos casos em que há problemas de colisão, as mensagens podem não ser recebidas de forma completa.
-Para lidar com este problema, a proposta é elaborar uma verificação de integridade: no início da mensagem, podemos enviar um hash da mensagem ou pelo menos o tamanho total da mansagem em caracteres, para que o receptor possa verificar se recebeu todos os caracteres de forma íntegra.
-Questão para reflexão: _a verificação de integridade de conteúdo é suportada pela verificação de tamanho da mensagem recebida em caracteres?_
+  O diagrama atualizado, envolvendo a verificação de integridade, o tratamento de colisões e a sincronia por botão, segue abaixo:
 
-_Elabore um diagrama de transição de estados (versão 3) para modelar como as duas placas irão interagir com o sincronismo por botão, a detecção de colisão e a verificação de integridade, considerando os diversos estados possíveis e os eventos que determinam as transições de estados (vocês podem utilizar o D2 diagrams visto em atividade anterior: https://play.d2lang.com/)_.
+<img width="2075" height="1778" alt="image" src="https://github.com/user-attachments/assets/cd4d2c81-bfca-4b94-b9a8-7ce8f065295d" />
 
-_Descreva um teste para verificação de correto funcionamento do sistema considerando este requisito de verificação de integridade, contemplando pré-condição, etapas do teste e pós-condição, de forma similar ao realizado em atividades anteriores (Dica: podemos mapear a correta verificação de integridade a comportamentos da placa?)_.
+  | | Teste de Verificaçãp de Integridade |
+| ----- | ----|
+| Pré-Condição | Ambas as placas começam em estados diferentes|
+| Etapas de Teste: 1 | Uma placa em estado de TX vai enviar um pacote propositalmente errado para RX da outra placa |
+| Etapas de Teste: 2 | A outra placa vai ler o pacote  |
+| Pós-Condição | A placa em estado de RX deve piscar vermelho para sinalizar o erro no envio |
 
 ## Etapa 2: Desenvolvimento Orientado a Testes
 
