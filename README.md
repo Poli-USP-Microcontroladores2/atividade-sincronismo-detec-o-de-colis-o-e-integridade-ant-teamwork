@@ -32,13 +32,11 @@ https://github.com/user-attachments/assets/4d33eeb9-d415-47ee-8040-3090cb11e4ef
 
 ### 1.2. Detecção de Colisão
 
-Reflita inicialmente se vocês consideram o sincronismo feito por botão algo perfeito, ou se ele pode falhar.
-_Será que é necessário fazer um sincronismo periódico?_
+  Sobre a detecção de colisão, não seria necessária essa detecção pelo fato de nossa implemetação com botão não necessitar de uma pessoa externa para sincronizar. Isso faz com que o sincronismo seja automático
+  e consiga coordenar sempre o estado do funcionamento de cada placa. Mas, apesar da nossa implementação não necessitar de detector de colisões, fez-se um código para detectar colisões e o diagrama de estados para
+  demonstrar como as placas devem funcionar para saber se devem falar ou não.
 
-Nos casos em que há problemas de sincronismo, podemos ter o cenário de colisão: quando as duas placas tentam transmitir ao mesmo tempo.
-Para lidar com este problema, a proposta é elaborar uma detecção de colisão: logo antes de transmitir a mensagem completa, ou após transmitir cada caractere, podemos ouvir o canal (modo de recepção) para verificar se não há alguém já transmitindo, e não iniciar a transmissão caso o canal de comunicação esteja ocupado.
-
-_Elabore um diagrama de transição de estados (versão 2) para modelar como as duas placas irão interagir com o sincronismo por botão e a detecção de colisão, considerando os diversos estados possíveis e os eventos que determinam as transições de estados (vocês podem utilizar o D2 diagrams visto em atividade anterior: https://play.d2lang.com/)_.
+  O diagrama de estados está logo abaixo para mostrar quais devem ser os estados e condições que a placa deve seguir para garantir a detecção por colisões:
 
 Diagrama: <img width="1576" height="1432" alt="image" src="https://github.com/user-attachments/assets/ea261e2d-9783-401c-bede-0a48ab551a83" />
 
