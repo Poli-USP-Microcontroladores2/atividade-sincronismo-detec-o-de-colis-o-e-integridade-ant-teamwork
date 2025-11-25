@@ -17,7 +17,7 @@
 #include <stdbool.h>
 
 #define MSG_SECRETA "paralelepiped"
-#define TEMPO_CICLO_MS 4000
+#define TEMPO_CICLO_MS 10000
 #define RX_BUF_SIZE 64
 
 #define UART_DEVICE_NODE DT_NODELABEL(uart0)
