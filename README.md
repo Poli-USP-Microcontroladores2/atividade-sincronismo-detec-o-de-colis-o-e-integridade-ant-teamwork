@@ -38,11 +38,18 @@ https://github.com/user-attachments/assets/4d33eeb9-d415-47ee-8040-3090cb11e4ef
 
   O diagrama de estados está logo abaixo para mostrar quais devem ser os estados e condições que a placa deve seguir para garantir a detecção por colisões:
 
-Diagrama: <img width="1576" height="1432" alt="image" src="https://github.com/user-attachments/assets/ea261e2d-9783-401c-bede-0a48ab551a83" />
+ <img width="1576" height="1432" alt="image" src="https://github.com/user-attachments/assets/ea261e2d-9783-401c-bede-0a48ab551a83" />
 
 
+  Para verificar o funcionamento correto do código, elaborou-se um teste que verifica se ele está realmente tratando as colisões. Nesse teste, as placas precisam verificar se outra placa está em TX/ se o canal está ocupado, ou seja, se a outra placa está enviando uma mensagem somente depois de verificar que o canal está aberto, a placa muda seu estado para TX para enviar mensagens.
 
-_Descreva um teste para verificação de correto funcionamento do sistema considerando este requisito de detecção de colisão, contemplando pré-condição, etapas do teste e pós-condição, de forma similar ao realizado em atividades anteriores (Dica: é possível mapear os estados mais relevantes a comportamentos do led da placa para observar o seu funcionamento?)_.
+  | | Teste de Sincronia |
+| ----- | ----|
+| Pré-Condição | Ambas as placas começam em estados diferentes e elas não estão mais conectadas por botão|
+| Etapas de Teste 1 | No momento que qualquer uma das placas der o tempo de trocar de estado, ela deve ficar em RX inicialmente|
+| Etapas de Teste 2 |Ela deve verificar o canal para ver se está recebendo uma mensagem. Se a placa estiver recebendo mensagem, ela permanece em RX e verfica novamente em 100ms. Se não, ela muda para TX e envia mensagens |
+| Pós-Condição | Nenhuma das placas pode estar em estado de TX (nesse caso no Led Azul) ao mesmo tempo |
+
 
 ### 1.3. Verificação de Integridade
 
