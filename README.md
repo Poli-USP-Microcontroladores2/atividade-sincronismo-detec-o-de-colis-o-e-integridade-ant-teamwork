@@ -24,12 +24,6 @@ Para verificar o funcionamento correto do código, testou-se o sincronismo entre
 | Etapas de Teste | No momento que qualquer uma das placas trocar de estado, resetar uma placa. |
 | Pós-Condição | A placa precisa estar no LED oposto ao LED da outra placa (Nesse caso, se uma placa estiver verde, a outra precisa estar azul e vice-versa. |
 
-Testou-se também se as placas sincronizavam mesmo resetando elas em tempos diferentes. Os testes podem ser vistos no vídeo a seguir:
-
-
-https://github.com/user-attachments/assets/4d33eeb9-d415-47ee-8040-3090cb11e4ef
-
-
 ### 1.2. Detecção de Colisão
 
   Sobre a detecção de colisão, não seria necessária essa detecção pelo fato de nossa implemetação com botão não necessitar de uma pessoa externa para sincronizar. Isso faz com que o sincronismo seja automático
@@ -82,7 +76,10 @@ As imagens e outras evidências de funcionamento devem estar descritas no README
 
 ### 2.1. Sincronismo por Botão
 
-Insira aqui as descrições dos resultados e referencie as fotos e capturas de tela que mostram o funcionamento.
+Testou-se se as placas sincronizavam mesmo resetando elas em tempos diferentes. Os testes podem ser vistos no vídeo a seguir:
+
+
+https://github.com/user-attachments/assets/4d33eeb9-d415-47ee-8040-3090cb11e4ef
 
 ### 2.2. Detecção de Colisão
 
