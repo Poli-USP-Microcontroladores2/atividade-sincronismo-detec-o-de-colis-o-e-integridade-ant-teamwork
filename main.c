@@ -28,7 +28,7 @@
 
 // --- Configurações ---
 #define MSG_SECRETA "paralelepipedo"
-#define TEMPO_CICLO_MS 4000
+#define TEMPO_CICLO_MS 10000
 #define RX_BUF_SIZE 64
 
 // --- Hardware ---
