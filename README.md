@@ -39,7 +39,7 @@ Para verificar o funcionamento correto do código, testou-se o sincronismo entre
 
   | | Teste de Colisão |
 | ----- | ----|
-| Pré-Condição | Ambas as placas começam em estados diferentes e elas não estão mais conectadas por botão|
+| Pré-Condição | Ambas as placas começam em estados diferentes e elas não estão mais conectadas por botão (fio laranja) |
 | Etapas de Teste: 1 | No momento que qualquer uma das placas der o tempo de trocar de estado, ela deve ficar em RX inicialmente|
 | Etapas de Teste: 2 |Ela deve verificar o canal para ver se está recebendo uma mensagem. Se a placa estiver recebendo mensagem, ela permanece em RX e verfica novamente em 100ms. Se não, ela muda para TX e envia mensagens |
 | Pós-Condição | Nenhuma das placas pode estar em estado de TX (nesse caso no Led Azul) ao mesmo tempo |
@@ -55,10 +55,10 @@ Para verificar o funcionamento correto do código, testou-se o sincronismo entre
 
   | | Teste de Verificaçãp de Integridade |
 | ----- | ----|
-| Pré-Condição | Ambas as placas começam em estados diferentes|
+| Pré-Condição | Ambas as placas começam em estados diferentes e uma placa envia o pacote de forma errada para a outra placa|
 | Etapas de Teste: 1 | Uma placa em estado de TX vai enviar um pacote propositalmente errado para RX da outra placa |
 | Etapas de Teste: 2 | A outra placa vai ler o pacote  |
-| Pós-Condição | A placa em estado de RX deve piscar vermelho para sinalizar o erro no envio |
+| Pós-Condição | A placa em estado de RX deve ascender o LED vermelho para sinalizar o erro no envio durante seu período de RX |
 
 ## Etapa 2: Desenvolvimento Orientado a Testes
 
@@ -83,8 +83,22 @@ https://github.com/user-attachments/assets/4d33eeb9-d415-47ee-8040-3090cb11e4ef
 
 ### 2.2. Detecção de Colisão
 
-Insira aqui as descrições dos resultados e referencie as fotos e capturas de tela que mostram o funcionamento.
+Testou-se a realização do tratamento de colisão sem o botão (utilizado pelo fio laranja, ou seja, sem o fio laranja) das placas e se elas sincronizavam mesmo sem o botão: 
+
+https://github.com/user-attachments/assets/87f40b9a-f888-48fc-b17b-eca830df5583
+
 
 ### 2.3. Verificação de Integridade
 
-Insira aqui as descrições dos resultados e referencie as fotos e capturas de tela que mostram o funcionamento.
+Testou-se a verificação de integridade das mensagens das placas. No caso, se a placa verificar que existe um erro na mensagem, ela liga o LED vermelho durante o período em que está no modo RX. Nesse vídeo, uma placa foi configurada para enviar o pacote com a payload "paralelepipeda" enquanto a outra espera receber o pacote "paralelepipedo" :
+
+
+https://github.com/user-attachments/assets/c4693a26-e9d9-4244-8f3c-15e218445e88
+
+
+Para o propósito de comparação com o caso de funcionamento normal, as duas placas estão configuradas com o mesmo pacote secreto, que elas precisam receber certo:
+
+https://github.com/user-attachments/assets/a7d73e08-ab6a-4d11-8bf1-683c6210c617
+
+### 2.4 Chat
+
