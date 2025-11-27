@@ -58,8 +58,7 @@ Para verificar o funcionamento correto do código, testou-se o sincronismo entre
 
   O diagrama atualizado, envolvendo a verificação de integridade, o tratamento de colisões e a sincronia por botão, segue abaixo:
 
-<img width="2075" height="1778" alt="image" src="https://github.com/user-attachments/assets/cd4d2c81-bfca-4b94-b9a8-7ce8f065295d" />
-
+<img width="2048" height="1575" alt="image" src="https://github.com/user-attachments/assets/d1f8e897-2014-4f77-bbaa-b8f3e83fa2eb" />
 
 
   | | Teste de Verificação de Integridade |
