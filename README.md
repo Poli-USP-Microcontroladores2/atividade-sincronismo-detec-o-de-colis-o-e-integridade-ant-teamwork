@@ -1,6 +1,9 @@
 # PSI-Microcontroladores2-Aula12
 Atividade: Sincronismo, Detecção de Colisão e Integridade
 
+- Bruno Souza Mora - NUSP: 16906121
+- Guilherme da Silva Fernanders - NUSP: 16840212
+
 
 ## Etapa 1: Modelagem e Planejamento de Testes
 
@@ -107,6 +110,4 @@ https://github.com/user-attachments/assets/c4693a26-e9d9-4244-8f3c-15e218445e88
 Para o propósito de comparação com o caso de funcionamento normal, as duas placas estão configuradas com o mesmo pacote secreto, que elas precisam receber certo:
 
 https://github.com/user-attachments/assets/a7d73e08-ab6a-4d11-8bf1-683c6210c617
-
-### 2.4 Chat
 
